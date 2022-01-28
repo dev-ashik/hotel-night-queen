@@ -1,0 +1,41 @@
+.roomCard {
+    float: left;
+    margin: 20px 30px 20px 30px;
+    box-shadow: 1px 1px 5px lightgray !important;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    /* padding-bottom: 10px; */
+}
+
+.roomAvatar {
+    background-color: red !important;
+}
+
+.icons {
+    height: 20px;
+    width: 20px;
+    color:gray;
+    /* margin-left: 20px; */
+    margin-bottom: -4px;
+}
+
+.BookButton {
+    border: none;
+    background-color: rgb(15, 15, 150);
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: white;
+    margin-left: 30px;
+}
+
+.cardBottomText {
+    margin-bottom: 2px;
+}
+
+.cardFooter {
+    margin-top: 10px;
+}
+
+.cardFooterMarginRight{
+    margin-right: 15px;
+}
