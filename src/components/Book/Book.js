@@ -13,6 +13,7 @@ import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Bookings from '../Bookings/Bookings';
 
 
 
@@ -43,7 +44,17 @@ const Book = () => {
     }
 
     const handleBooking = () => {
-        
+        const newBooking = {...loggedInUser, ...selectedDate}
+        fetch('http://localhost:5000/addBooking', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json',},
+            body: JSON.stringify(newBooking)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
     }
 
 
@@ -78,6 +89,7 @@ const Book = () => {
                 </Stack>
                 <Button onClick={handleBooking} variant="contained">Book Now</Button>
             </LocalizationProvider>
+        <Bookings/>
         </div>
     );
 };
